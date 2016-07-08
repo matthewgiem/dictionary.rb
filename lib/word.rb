@@ -12,9 +12,7 @@ class Word
   end
 
   define_method(:save) do
-    if self != ''
-      @@words.push(self)
-    end
+    @@words.push(self)
   end
 
   define_method(:id) do
