@@ -43,4 +43,16 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
+
+  describe(".find") do
+    it("returns a dealership by its id number") do
+      test_word = Word.new("kitty")
+      test_word.save()
+      test_word2 = Word.new("japan")
+      test_word2.save()
+      expect(Word.find(test_word2.id())).to(eq(test_word2))
+    end
+  end
+
+  
 end
