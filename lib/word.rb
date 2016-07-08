@@ -23,6 +23,10 @@ class Word
     @word
   end
 
+  define_singleton_method(:all) do
+    @@words
+  end
+
   define_singleton_method(:find) do
     found_word = nil
     @@words.each() do |word|
