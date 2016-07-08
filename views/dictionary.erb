@@ -1,11 +1,12 @@
+
 <h1>Dictionary</h1>
 <br>
 <h2>list of all you words</h2>
-<h2>click on any to add or view their definition</h2>
-  <% @words.each() do |word| %>
-    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
-  <% end %>
+
 <ul>
+  <% @words.each() do |word| %>
+    <li><%= word.name() %></li>
+  <% end %>
 </ul>
 
 
