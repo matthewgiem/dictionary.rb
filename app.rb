@@ -5,7 +5,7 @@ require('./lib/definition')
 require('./lib/word')
 
 get('/') do
-  @words = []
+  @words = Word.all()
   erb(:index)
 end
 
@@ -26,6 +26,15 @@ get('/words/:id') do
 end
 
 get('/home') do
+  @words = Word.all()
+  erb(:index)
+end
+
+post('/words/:id/definition') do
+  id = params.fetch('id').to_i()
+  definition = params.fetch('definition')
+  definition.save()
+  @word = Word.find(id)
   @words = Word.all()
   erb(:index)
 end

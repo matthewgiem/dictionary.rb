@@ -1,0 +1,6 @@
+<h1><%= @word.name()%></h1>
+
+<form action="/words/<%= @word.id() %>/definition" method="post">
+<label for="definition">definition</label>
+<input type="text" name="definition">
+</form>

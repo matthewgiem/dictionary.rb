@@ -3,7 +3,6 @@ class Definition
   @@definitions = []
 
   define_method(:initialize) do |attributes|
-    @part_of_speech = attributes.fetch(:part_of_speech)
     @definition = attributes.fetch(:definition)
     @id = @@definitions.length() + 1
   end
