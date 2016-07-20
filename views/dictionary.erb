@@ -5,9 +5,9 @@
 
 <ul>
   <% @words.each() do |word| %>
-    <li><%= word.name() %></li>
+    <li><a href="/definition/<%= word.id() %>"><%= word.name() %></a></li>
   <% end %>
 </ul>
 
 
-<a href="/word/new"><button type="button" name="button">add a new word to the dictionary</button></a>
+<a href="/">home</a>

@@ -33,8 +33,21 @@ end
 post('/words/:id/definition') do
   id = params.fetch('id').to_i()
   definition = params.fetch('definition')
-  definition.save()
+  @word_definition = Definition.new({:definition => definition})
+  @word_definition.save()
   @word = Word.find(id)
   @words = Word.all()
+  @word.add_definition(@word_definition)
   erb(:index)
+end
+
+get('/words') do
+  @words = Word.all()
+  erb(:dictionary)
+end
+
+get('/definition/:id') do
+  id = params.fetch('id').to_i()
+  @word = Word.find(id)
+  erb(:definition)
 end

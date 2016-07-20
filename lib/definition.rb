@@ -1,5 +1,5 @@
 class Definition
-  attr_reader(:part_of_speech, :definition)
+  attr_reader(:definition)
   @@definitions = []
 
   define_method(:initialize) do |attributes|

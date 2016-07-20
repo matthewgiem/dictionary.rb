@@ -23,8 +23,16 @@ class Word
     @word
   end
 
+  define_method(:definitions) do
+    @definition
+  end
+
   define_singleton_method(:all) do
     @@words
+  end
+
+  define_method(:add_definition) do |definition|
+    @definition.push(definition)
   end
 
   define_singleton_method(:find) do |id|
