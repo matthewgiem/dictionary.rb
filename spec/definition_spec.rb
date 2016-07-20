@@ -29,14 +29,6 @@ describe('Definition') do
     end
   end
 
-  describe('#part_of_speech') do
-    it('returns the part of speech for the givin word') do
-      test_definition = Definition.new({:definition => "growth in response to moonlight", :part_of_speech => "verb"})
-      expect(test_definition.part_of_speech()).to(eq("verb"))
-      Definition.clear()
-    end
-  end
-
   describe('#definition') do
     it('returns the part of speech for the givin word') do
       test_definition = Definition.new({:definition => "growth in response to moonlight", :part_of_speech => "verb"})
